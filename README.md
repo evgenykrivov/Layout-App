@@ -16,7 +16,7 @@ The first one is here - https://github.com/evgenytryzo/Create-App-Layout-trial
 - ### First, copy the repository:
 
 ```
-git clone https://github.com/https://github.com/evgenytryzo/Create-App-Layout.git
+git clone git@github.com:evgenytryzo/Layout-App.git
 ```
 
 - ### Then run the command on the command line:

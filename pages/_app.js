@@ -1,4 +1,4 @@
-const MyApp = ( { Component, pageProps } ) => (
+const MyApp = ({ Component, pageProps }) => (
   // The height of the Main block is fixed with 4k resolution, excluding the height of the Header and Footer
   <>
     <Component { ...pageProps } />
@@ -13,8 +13,7 @@ const MyApp = ( { Component, pageProps } ) => (
         display: flex;
         flex-direction: column;
         height: 100vh;
-        min-width: 100px;
-        max-width: 1920px;
+        max-width: 1280px;
         margin: 0 auto;
       }
 
@@ -25,7 +24,6 @@ const MyApp = ( { Component, pageProps } ) => (
 
       main {
         flex-grow: 1;
-        max-height: calc(3656px - 50px - 300px);
       }
 
       footer {
