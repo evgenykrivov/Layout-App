@@ -3,7 +3,7 @@ import Header from "../Header"
 import Main from "../Main"
 import Footer from "../Footer"
 
-const MainLayout = ({children}) => (
+const MainLayout = ( { children } ) => (
   <>
     <Head>
       <meta charSet="UTF-8"></meta>
@@ -22,7 +22,7 @@ const MainLayout = ({children}) => (
 
     <Header/>
     <Main>
-      {children}
+      { children }
     </Main>
     <Footer/>
   </>

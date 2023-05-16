@@ -1,10 +1,12 @@
-const MyApp = ({ Component, pageProps }) => (
+const MyApp = ( { Component, pageProps } ) => (
+  // The height of the Main block is fixed with 4k resolution, excluding the height of the Header and Footer
   <>
-    <Component {...pageProps} />
-    <style jsx global> {`
+    <Component { ...pageProps } />
+    <style jsx global> { `
       * {
         margin: 0;
         padding: 0;
+        box-sizing: content-box;
       }
 
       #__next {
@@ -12,6 +14,8 @@ const MyApp = ({ Component, pageProps }) => (
         flex-direction: column;
         height: 100vh;
         min-width: 100px;
+        max-width: 1920px;
+        margin: 0 auto;
       }
 
       header {
@@ -21,6 +25,7 @@ const MyApp = ({ Component, pageProps }) => (
 
       main {
         flex-grow: 1;
+        max-height: calc(3656px - 50px - 300px);
       }
 
       footer {
@@ -28,7 +33,7 @@ const MyApp = ({ Component, pageProps }) => (
         background-color: lightgray;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and ( 320px <= width <= 768px ) {
         footer {
           background-color: gray;
         }
@@ -41,7 +46,7 @@ const MyApp = ({ Component, pageProps }) => (
           background-color: lightgray;
         }
       }
-    `} </style>
+    ` } </style>
   </>
 )
 
