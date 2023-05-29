@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
     command: >
-      sh -c "yarn install && yarn dev"
+      sh -c "yarn dev"
     build:
       context: .
       dockerfile: next.Dockerfile

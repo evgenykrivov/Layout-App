@@ -6,4 +6,4 @@ COPY package.json yarn.lock ./
 
 COPY . ./app
 
-CMD ["yarn", "dev"]
+RUN yarn set version berry
