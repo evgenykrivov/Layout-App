@@ -1,5 +1,4 @@
 const MyApp = ({ Component, pageProps }) => (
-  // The height of the Main block is fixed with 4k resolution, excluding the height of the Header and Footer
   <>
     <Component { ...pageProps } />
     <style jsx global> { `
