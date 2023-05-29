@@ -6,10 +6,10 @@ services:
     stdin_open: true
     volumes:
       - .:/app
-    command: >
-      sh -c "yarn dev"
     build:
       context: .
       dockerfile: next.Dockerfile
+    command: >
+        sh -c "yarn dev"
     ports:
       - "4000:4000"
