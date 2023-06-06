@@ -1,0 +1,53 @@
+.components {
+    display: flex;
+    position: absolute;
+    min-width: 100px;
+    left: 50%;
+    top: 1%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%);
+    border-radius: 5px;
+    padding: 5px 15px;
+    opacity: 0.8;
+}
+
+@media screen and (1200px < width) {
+    .components::before {
+        content: "XL w";
+    }
+
+    .components {
+        background-color: red;
+    }
+}
+
+@media screen and (768px < width <= 1200px) {
+    .components::before {
+        content: "X w"
+    }
+
+    .components {
+        background-color: orange;
+    }
+}
+
+@media screen and (400px < width <= 768px) {
+    .components::before {
+        content: "M w"
+    }
+
+    .components {
+        background-color: yellow;
+    }
+}
+
+@media screen and (width <= 400px) {
+    .components::before {
+        content: "S w"
+    }
+
+    .components {
+        background-color: greenyellow;
+    }
+}

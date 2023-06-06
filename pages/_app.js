@@ -29,20 +29,7 @@ const MyApp = ({ Component, pageProps }) => (
         min-height: 300px;
         background-color: lightgray;
       }
-
-      @media screen and ( 320px <= width <= 768px ) {
-        footer {
-          background-color: gray;
-        }
-
-        header {
-          background-color: gray;
-        }
-
-        main {
-          background-color: lightgray;
-        }
-      }
+      
     ` } </style>
   </>
 )
