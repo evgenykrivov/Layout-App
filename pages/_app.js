@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps }) => (
         min-height: 300px;
         background-color: lightgray;
       }
-      
+
     ` } </style>
   </>
 )

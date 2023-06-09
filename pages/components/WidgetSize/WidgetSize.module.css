@@ -24,7 +24,7 @@
 
 @media screen and (768px < width <= 1200px) {
     .components::before {
-        content: "X w"
+        content: "X w";
     }
 
     .components {
@@ -34,7 +34,7 @@
 
 @media screen and (400px < width <= 768px) {
     .components::before {
-        content: "M w"
+        content: "M w";
     }
 
     .components {
@@ -44,7 +44,7 @@
 
 @media screen and (width <= 400px) {
     .components::before {
-        content: "S w"
+        content: "S w";
     }
 
     .components {

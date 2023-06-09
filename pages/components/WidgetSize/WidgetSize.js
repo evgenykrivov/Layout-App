@@ -9,8 +9,8 @@ const ScreenWidth = () => {
       setWidth(window.innerWidth)
     }
     handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   return <p className={ styles.components }>: { width } px</p>
