@@ -1,4 +1,4 @@
-.components {
+.ViewPort {
     display: flex;
     position: absolute;
     min-width: 100px;
@@ -9,45 +9,44 @@
     transform: translate(-50%);
     border-radius: 5px;
     padding: 5px 15px;
-    opacity: 0.8;
 }
 
 @media screen and (1200px < width) {
-    .components::before {
+    .ViewPort::before {
         content: "XL w";
     }
 
-    .components {
+    .ViewPort {
         background-color: red;
     }
 }
 
 @media screen and (768px < width <= 1200px) {
-    .components::before {
+    .ViewPort::before {
         content: "X w";
     }
 
-    .components {
+    .ViewPort {
         background-color: orange;
     }
 }
 
 @media screen and (400px < width <= 768px) {
-    .components::before {
+    .ViewPort::before {
         content: "M w";
     }
 
-    .components {
+    .ViewPort {
         background-color: yellow;
     }
 }
 
 @media screen and (width <= 400px) {
-    .components::before {
+    .ViewPort::before {
         content: "S w";
     }
 
-    .components {
+    .ViewPort {
         background-color: greenyellow;
     }
 }
