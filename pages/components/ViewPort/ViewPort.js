@@ -1,12 +1,11 @@
 import styles from "./ViewPort.module.css"
-import { useState, useEffect } from "react"
+import React from "react"
 
 const ViewPort = () => {
-  const [ width, setWidth ] = useState(0)
+  const [ width, setWidth ] = React.useState(0)
 
   const handleResize = () => {
     setWidth(window.innerWidth)
-    console.log("handleResize")
   }
 
   const onLoadHandler = () => {
@@ -17,12 +16,11 @@ const ViewPort = () => {
     window.removeEventListener("resize", handleResize)
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
       handleResize()
       onLoadHandler()
       return onUnloadHandler
-    },
-    [])
+    }, [])
 
   return <p className={ styles.ViewPort }>: { width } px</p>
 }
