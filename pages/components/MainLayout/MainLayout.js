@@ -2,7 +2,7 @@ import Head from "next/head"
 import Header from "../Header"
 import Main from "../Main"
 import Footer from "../Footer"
-import WidgetSize from "@/pages/components/WidgetSize"
+import WidgetSize from "pages/components/ViewPort"
 
 const MainLayout = ({ children }) => (<>
   <Head>
