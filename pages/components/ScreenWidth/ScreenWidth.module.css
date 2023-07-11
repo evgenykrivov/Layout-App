@@ -1,4 +1,4 @@
-.ViewPort {
+.ScreenWidth {
     display: flex;
     position: absolute;
     min-width: 100px;
@@ -9,44 +9,49 @@
     transform: translate(-50%);
     border-radius: 5px;
     padding: 5px 15px;
+    cursor: pointer;
+}
+
+.ScreenWidth:hover {
+    opacity: 0.6;
 }
 
 @media screen and (1200px < width) {
-    .ViewPort::before {
+    .ScreenWidth::before {
         content: "XL w";
     }
 
-    .ViewPort {
+    .ScreenWidth {
         background-color: red;
     }
 }
 
 @media screen and (768px < width <= 1200px) {
-    .ViewPort::before {
+    .ScreenWidth::before {
         content: "X w";
     }
 
-    .ViewPort {
+    .ScreenWidth {
         background-color: orange;
     }
 }
 
 @media screen and (400px < width <= 768px) {
-    .ViewPort::before {
+    .ScreenWidth::before {
         content: "M w";
     }
 
-    .ViewPort {
+    .ScreenWidth {
         background-color: yellow;
     }
 }
 
 @media screen and (width <= 400px) {
-    .ViewPort::before {
+    .ScreenWidth::before {
         content: "S w";
     }
 
-    .ViewPort {
+    .ScreenWidth {
         background-color: greenyellow;
     }
 }
