@@ -2,7 +2,7 @@ import Head from "next/head"
 import Header from "../Header"
 import Main from "../Main"
 import Footer from "../Footer"
-import WidgetSize from "pages/components/ViewPort"
+import ScreenWidth from "@/pages/components/ScreenWidth/ScreenWidth"
 
 const MainLayout = ({ children }) => (<>
   <Head>
@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => (<>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
   </Head>
 
-  <WidgetSize/>
+  <ScreenWidth/>
   <Header/>
   <Main>
     { children }
