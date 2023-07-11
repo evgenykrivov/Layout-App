@@ -27,24 +27,23 @@ const ScreenWidth = (callback, deps) => {
     setWidth(width => {
       return 0
     })
-  }
-
-  const handleClick = () => {
-    setShowComponent(false)
-    clearWidth()
-    onUnloadHandler()
-    console.log("If you see this message, it means the component has been removed")
+    console.log(width)
   }
 
   useEffect(handleResize, [])
 
   useEffect(() => {
-    console.log("useEffect")
-    onLoadHandler()
+    if ( showComponent ) {
+      onLoadHandler()
+    } else if ( !showComponent ) {
+      clearWidth()
+    }
     return onUnloadHandler
-  }, [])
+  }, [ onLoadHandler, onUnloadHandler, showComponent ])
 
-  return <button onClick={ handleClick }>{ showComponent &&
+  return <button onClick={ () => {
+    setShowComponent(false)
+  } }>{ showComponent &&
     <p className={ styles.ScreenWidth }>: { width } px</p> }</button>
 }
 
